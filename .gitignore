@@ -37,3 +37,6 @@ Thumbs.db
 # Unity WebGL build folders
 [Aa]ssets/[Ss]treamingAssets/aa/*
 [Aa]ssets/[Ss]treamingAssets/AddressablesLinker/*
+
+# Custom
+.vscode
