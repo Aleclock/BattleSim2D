@@ -1,0 +1,39 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+
+# Memory dumps
+*.kdmp
+*.unitypackage
+*.bundle
+
+# Visual Studio / Rider / VS Code generated files
+.vs/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docuser
+*.opendb
+*.db
+*.dgml
+*.VC.db
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Unity WebGL build folders
+[Aa]ssets/[Ss]treamingAssets/aa/*
+[Aa]ssets/[Ss]treamingAssets/AddressablesLinker/*
