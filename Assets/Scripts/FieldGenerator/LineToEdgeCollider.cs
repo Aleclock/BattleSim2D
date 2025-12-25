@@ -3,11 +3,21 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(LineRenderer))]
 [RequireComponent(typeof(EdgeCollider2D))]
-public class LineColliderSync : MonoBehaviour
+public class LineToEdgeCollider : MonoBehaviour
 {
-    void Start()
+    [SerializeField] private DrawField drawField;
+    void Awake()
     {
-        LineRenderer line = GetComponent<LineRenderer>();
+        if (drawField == null)
+            drawField = GetComponent<DrawField>();
+
+        drawField.OnLineUpdated += UpdateEdgeCollider;
+        Debug.Log("LineToEdgeCollider subscribed to OnLineUpdated event.");
+    }
+
+    private void UpdateEdgeCollider(LineRenderer line)
+    {
+        Debug.Log("Updating Edge Collider from Line Renderer");
         EdgeCollider2D edge = GetComponent<EdgeCollider2D>();
 
         // 1. Get positions from the Line Renderer

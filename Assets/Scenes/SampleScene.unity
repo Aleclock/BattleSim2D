@@ -386,9 +386,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1945551912}
   - component: {fileID: 1945551914}
+  - component: {fileID: 1945551915}
   - component: {fileID: 1945551913}
   - component: {fileID: 1945551916}
-  - component: {fileID: 1945551915}
   m_Layer: 0
   m_Name: GameField
   m_TagString: Untagged
@@ -454,11 +454,14 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 3.0000002, y: -4.5, z: 0}
+  - {x: 2.9999998, y: 4.5, z: 0}
+  - {x: -3.0000002, y: 4.5, z: 0}
+  - {x: -2.9999998, y: -4.5, z: 0}
+  - {x: 3.0000002, y: -4.5, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -513,7 +516,7 @@ LineRenderer:
     generateLightingData: 0
   m_MaskInteraction: 0
   m_UseWorldSpace: 1
-  m_Loop: 0
+  m_Loop: 1
   m_ApplyActiveColorSpace: 1
 --- !u!114 &1945551914
 MonoBehaviour:
@@ -527,9 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d613a638b16a64670be8c7db0f734cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 50
-  radius: 3
-  angleDegrees: 360
+  profile: {fileID: 11400000, guid: cda6dfe90ef10204cbb2a69b21ba47e9, type: 2}
+  fieldMaterial: {fileID: 2100000, guid: defeb46fdda4b444ba1b2bb5dfba8141, type: 2}
 --- !u!114 &1945551915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97790861e0904e318e4a2249c4174dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawField: {fileID: 1945551914}
 --- !u!68 &1945551916
 EdgeCollider2D:
   m_ObjectHideFlags: 0
